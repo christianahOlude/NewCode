@@ -1,11 +1,15 @@
 package org.example.data.models;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
+@Getter
+@Setter
 
 public class User {
     @Id
@@ -15,6 +19,5 @@ public class User {
     private String password;
     @OneToMany
     List<Contacts> contactsList =  new ArrayList<>();
-
 
 }
